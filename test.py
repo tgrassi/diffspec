@@ -2,12 +2,14 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.interpolate import interp1d
 
+# define input files here
 input_file1 = 'data/CH2DOD/CH2DOD_cut_15-55.dpt'
 input_file2 = 'data/CH2DOH/CH2DOH_15-95_lowP.dat'
 
-output_file_diff = 'data/difference.dpt'
-output_file1_new = input_file1.replace('.dpt', '_new.dpt')
-output_file2_new = input_file2.replace('.dat', '_new.dpt')
+# define output files here
+output_file_diff = 'data/difference.dpt'  # difference
+output_file1_new = input_file1.replace('.dpt', '_new.dpt')  # interpolated
+output_file2_new = input_file2.replace('.dat', '_new.dpt')  # interpolated
 
 # read data
 xdata1, ydata1 = np.loadtxt(input_file1).T
